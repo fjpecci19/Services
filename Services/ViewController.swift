@@ -18,9 +18,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var cuentas: UIButton!
     @IBOutlet weak var tarjetas: UIButton!
     @IBOutlet weak var servicios: UIButton!
+    @IBOutlet weak var busqueda: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        busqueda.delegate = self
+    }
+    
+    func restoreOriginalDesign(for button: UIButton) {
+        button.backgroundColor = .lightGray
+        button.setTitleColor(.black, for: .normal)
     }
     
     @IBAction func inicio(_ sender: Any) {
@@ -65,5 +73,11 @@ class ViewController: UIViewController {
             servicios.setTitleColor(.white, for: .normal)
         }
         ispressed4.toggle()
+    }
+}
+
+extension ViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        busqueda.resignFirstResponder()
     }
 }
