@@ -18,12 +18,31 @@ class ViewController: UIViewController {
     @IBOutlet weak var cuentas: UIButton!
     @IBOutlet weak var tarjetas: UIButton!
     @IBOutlet weak var servicios: UIButton!
+    
     @IBOutlet weak var busqueda: UISearchBar!
+    
+    @IBOutlet weak var tabla1: UITableView!
+    @IBOutlet weak var tabla2: UITableView!
+    
+    struct tablauno {
+        let section: String
+    }
+    
+    let datauno: [tablauno] = [
+        tablauno(section: "Telefonía"),
+        tablauno(section: "Servicios Privados"),
+        tablauno(section: "Servicios públicos")
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         busqueda.delegate = self
+        
+        tabla1.dataSource = self
+        
+        let nib = UINib(nibName: "Titulo", bundle: nil)
+        tabla1.register(nib, forCellReuseIdentifier: "celda")
     }
     
     func restoreOriginalDesign(for button: UIButton) {
@@ -79,5 +98,18 @@ class ViewController: UIViewController {
 extension ViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         busqueda.resignFirstResponder()
+    }
+}
+
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return datauno.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let uno = datauno[indexPath.row]
+        let cell = tabla1.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! Titulo
+        cell.section.text = uno.section
+        return cell
     }
 }
