@@ -41,8 +41,9 @@ class ViewController: UIViewController {
         
         tabla1.dataSource = self
         
-        let nib = UINib(nibName: "Titulo", bundle: nil)
-        tabla1.register(nib, forCellReuseIdentifier: "celda")
+        let nibuno = UINib(nibName: "Titulo", bundle: nil)
+        tabla1.register(nibuno, forCellReuseIdentifier: "celda")
+
     }
     
     func restoreOriginalDesign(for button: UIButton) {
