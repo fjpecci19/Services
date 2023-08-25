@@ -26,12 +26,16 @@ class ViewController: UIViewController {
     
     struct tablauno {
         let section: String
+        let picture1: String
+        let picture2: String
+        let picture3: String
+        let picture4: String
     }
     
     let datauno: [tablauno] = [
-        tablauno(section: "Telefonía"),
-        tablauno(section: "Servicios Privados"),
-        tablauno(section: "Servicios públicos")
+        tablauno(section: "Telefonía", picture1: "tigo_png", picture2: "tigo_png", picture3: "tigo_png", picture4: "tigo_png"),
+        tablauno(section: "Servicios Privados", picture1: "tigo_png", picture2: "tigo_png", picture3: "tigo_png", picture4: "tigo_png"),
+        tablauno(section: "Servicios públicos", picture1: "tigo_png", picture2: "tigo_png", picture3: "tigo_png", picture4: "tigo_png")
     ]
     
     override func viewDidLoad() {
@@ -111,6 +115,10 @@ extension ViewController: UITableViewDataSource {
         let uno = datauno[indexPath.row]
         let cell = tabla1.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! Titulo
         cell.section.text = uno.section
+        cell.imageone.image = UIImage(named: "tigo_png")
+        cell.imagetwo.image = UIImage(named: uno.picture2)
+        cell.imagethree.image = UIImage(named: uno.picture3)
+        cell.imagefour.image = UIImage(named: uno.picture4)
         return cell
     }
 }
