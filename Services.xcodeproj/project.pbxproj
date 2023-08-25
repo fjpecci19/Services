@@ -15,6 +15,7 @@
 		1C431F062A98DEA500A5F2E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C431F042A98DEA500A5F2E2 /* LaunchScreen.storyboard */; };
 		1C431F112A98DEA500A5F2E2 /* ServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C431F102A98DEA500A5F2E2 /* ServicesTests.swift */; };
 		1C431F1C2A98DEA500A5F2E2 /* ServicesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C431F1B2A98DEA500A5F2E2 /* ServicesUITests.swift */; };
+		1C431F302A98F57100A5F2E2 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C431F2F2A98F57100A5F2E2 /* Items.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		1C431F172A98DEA500A5F2E2 /* ServicesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServicesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C431F1B2A98DEA500A5F2E2 /* ServicesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesUITests.swift; sourceTree = "<group>"; };
 		1C431F1D2A98DEA500A5F2E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C431F2F2A98F57100A5F2E2 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				1C431F022A98DEA500A5F2E2 /* Assets.xcassets */,
 				1C431F042A98DEA500A5F2E2 /* LaunchScreen.storyboard */,
 				1C431F072A98DEA500A5F2E2 /* Info.plist */,
+				1C431F2F2A98F57100A5F2E2 /* Items.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C431F302A98F57100A5F2E2 /* Items.swift in Sources */,
 				1C431EFE2A98DE9800A5F2E2 /* ViewController.swift in Sources */,
 				1C431EFA2A98DE9800A5F2E2 /* AppDelegate.swift in Sources */,
 				1C431EFC2A98DE9800A5F2E2 /* SceneDelegate.swift in Sources */,
@@ -446,7 +450,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Roshka.Services;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -465,7 +469,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Roshka.Services;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
